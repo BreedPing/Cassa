@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cassa</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Cassa</h1>
+    
+    <div class="button-container">
+        <button class="food-button yellow" onclick="addProduct('Patatine', 4)">Patatine (4€)</button>
+        <button class="food-button green" onclick="addProduct('Risotto', 5)">Risotto (5€)</button>
+        <button class="food-button red" onclick="addProduct('Birra', 5)">Birra (5€)</button>
+        <button class="food-button blue" onclick="addProduct('Acqua', 1)">Acqua (1€)</button>
+    </div>
+    
+    <h2>Ordine</h2>
+    <ul id="order-list"></ul>
+    
+    <button id="confirm-button" onclick="confirmOrder()">Conferma Ordine</button>
+    
+    <div id="total-label">Totale: 0€</div>
+    
+    <div id="sum-label">Totale Incassato: 0€</div>
+    
+    <div id="admin-panel">
+        <h2>Modalità Amministrazione</h2>
+        <div id="login-container">
+            <label for="password-input">Password:</label>
+            <input type="password" id="password-input">
+            <button onclick="adminLogin()">Accedi</button>
+        </div>
+        
+        <div id="admin-commands" style="display: none;">
+            <button onclick="resetOrder()">Resetta Ordine</button>
+            <button onclick="clearTotal()">Cancella Totale Incassato</button>
+        </div>
+        
+        <button id="logout-button" onclick="logout()" style="display: none;">Logout</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
