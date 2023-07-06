@@ -53,8 +53,8 @@ function getPrice(productName) {
     // Esempio:
     const prices = {
         'Patatine': 4,
-        'Risotto': 5,
-        'Birra': 5,
+        'Risotto': 6,
+        'Birra': 4,
         'Acqua': 1
     };
     return prices[productName];
